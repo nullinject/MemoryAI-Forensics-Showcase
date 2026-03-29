@@ -1,6 +1,6 @@
 # MemoryAI Forensics
 
-一个面向数字取证与安全运营场景的 AI 驱动内存取证平台。系统将大语言模型、LangGraph 工作流编排、Volatility 取证能力、YARA 规则匹配与可视化案件工作台整合为统一分析链路，提供从内存镜像接入、自动化狩猎、证据交叉验证到 Markdown / PDF 报告输出的端到端闭环。
+面向数字取证与安全运营场景的 AI 驱动内存取证平台。MemoryAI Forensics 将大语言模型、LangGraph 工作流编排、Volatility 取证能力、YARA 规则匹配与可视化案件工作台整合为统一分析链路，用于完成从内存镜像接入、自动化狩猎、证据交叉验证到结构化报告输出的端到端闭环。
 
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB.svg)](https://www.python.org/)
 [![Vue3](https://img.shields.io/badge/Vue-3.x-42B883.svg)](https://vuejs.org/)
@@ -8,9 +8,11 @@
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED.svg)](https://docs.docker.com/compose/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-Agentic%20Workflow-FFB000.svg)](https://www.langchain.com/langgraph)
 
+> Built for memory-first investigation workflows, analyst-facing case management, and AI-orchestrated forensics at platform scale.
+
 ---
 
-## Overview
+## Why MemoryAI Forensics
 
 MemoryAI Forensics 不只是给 Volatility 套一层 Web 界面，而是围绕案件生命周期、流式分析体验、证据完整性、团队隔离与可复盘报告构建的取证分析平台。
 
@@ -22,6 +24,13 @@ MemoryAI Forensics 不只是给 Volatility 套一层 Web 界面，而是围绕�
 - SSE 实时日志、阶段进度、长任务 keep-alive 与终态收敛
 - SmartDumper 三级容错、YARA 交叉验证、DKOM / 孤儿进程逃逸检测
 - Markdown / PDF 报告输出与攻击拓扑可视化
+
+它适合被理解为一套“内存取证调查平台”，而不是单点取证脚本或单次分析 Demo：
+
+- 对分析过程进行可视化与案件化组织
+- 对长任务与异常路径进行平台级收敛
+- 对 Linux 符号链、验证链和报告链进行统一编排
+- 对团队协作、案件复盘与输出交付提供完整支撑
 
 > 当前仓库为 Showcase 展示仓库，聚焦系统能力说明、界面展示与技术方案说明。完整工程实现与持续演进版本位于私有研发仓库中。
 
@@ -89,6 +98,26 @@ MemoryAI Forensics 不只是给 Volatility 套一层 Web 界面，而是围绕�
 
 ---
 
+## Why It Stands Out
+
+### Platform, Not Script
+
+系统将“前端工作台、案件编排、工作流执行、底层取证引擎、证据输出”拆成清晰层次，适合持续迭代，而不是只能跑一条固定命令链。
+
+### Investigation Experience Matters
+
+从登录、上传、历史案件、服务器镜像复用、SSE 实时日志、报告查看到 PDF 导出，整套体验围绕分析员日常流程设计，而不是只关心后端能否执行成功。
+
+### Failure Is a First-Class Concern
+
+插件失败、Linux 符号缺失、长任务超时感知、浏览器断连、证据不足等情况都被纳入正式设计，而不是被视为异常边缘案例。
+
+### AI With Boundaries
+
+LLM 负责策略生成、可疑对象聚焦与报告组织，底层证据依旧来自 Volatility、YARA、Dump 工件与验证结果，这让平台既有自动化能力，也保留证据链的可解释性。
+
+---
+
 ## Architecture
 
 ![MemoryAI Forensics 系统架构图](./assets/architecture-overview.png)
@@ -106,6 +135,17 @@ MemoryAI Forensics 不只是给 Volatility 套一层 Web 界面，而是围绕�
 - 安全产品团队构建 AI 驱动取证编排平台的工程参考
 - Linux / Windows 内存取证自动化分析与证据归档
 - AI Agent / LangGraph 在安全场景中的平台化落地展示
+
+---
+
+## Built For Review
+
+这个 Showcase 仓库适合以下几类读者快速理解项目：
+
+- 安全团队负责人：关注平台能力、流程闭环与输出结果
+- 技术评审 / 面试官：关注系统边界、架构分层与工程完整性
+- 合作方 / 潜在用户：关注界面形态、调查流程与交付能力
+- 工程团队：关注 LangGraph、SSE、符号链与执行层解耦设计
 
 ---
 
